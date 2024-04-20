@@ -4,7 +4,7 @@ This is a simple Todo List with a Contact Card of a random user fetched from ran
 
 The project is created as a Wed Development Skill Assessment Project submission for the Honors IT position at USF JGHC by **Quang Minh Tran**.
 
-
+The project is built using Vite + React + TypeScript with DaisyUI for the main design.
 
 ### Usage:
 
