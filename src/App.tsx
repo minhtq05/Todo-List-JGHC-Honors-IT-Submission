@@ -6,7 +6,7 @@ function App() {
 	return (
 		<div>
 			<div className="bg-white">
-				<h2 className="text-center text-3xl py-5 text-green-950">Quang Minh Tran - USF Honors It Submission</h2>
+				<h2 className="text-center text-4xl font-extrabold py-5 text-green-950 m-5">Quang Minh Tran - USF Honors IT Submission</h2>
 			</div>
 			<TodoList />
 			<ContactCard />
