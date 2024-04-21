@@ -2,9 +2,6 @@ import { useState, useEffect } from 'react';
 import TodoItem from './TodoItem';
 import { todos } from '../data/constants';
 import { Item, SubItem } from '../data/types';
-import { motion, easeInOut } from 'framer-motion';
-
-
 
 
 export default function TodoList() {

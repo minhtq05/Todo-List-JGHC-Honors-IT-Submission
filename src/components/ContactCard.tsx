@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { easeIn, easeInOut, motion } from 'framer-motion';
+import { easeInOut, motion } from 'framer-motion';
 
 const spring = {
     type: "spring",
@@ -9,13 +9,39 @@ const spring = {
     ease: easeInOut,
 }
 
+interface Person {
+    name: {
+        title: string,
+        first: string,
+        last: string,
+    },
+    email: string,
+    dob: {
+        date: string,
+        age: number,
+    },
+    cell: string,
+    picture: {
+        large: string,
+    },
+}
+
+interface Response {
+    data: {
+        results: [
+            Person,
+        ],
+    }
+}
+
 function ContactCard() {
-    const [randomPerson, setPerson] = useState(null);
+    const [randomPerson, setPerson] = useState<Person>();
 
     useEffect(() => {
-        console.log("get user!")
-        axios.get('https://randomuser.me/api/').then((response) => {
+        axios.get('https://randomuser.me/api/').then((response: Response) => {
             setPerson(response.data.results[0]);
+        }).catch(function (error): void {
+            console.log("An error occurred: " + error.toJSON());
         })
     }, []);
 

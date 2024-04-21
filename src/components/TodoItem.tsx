@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Item, SubItem } from '../data/types';
-import { AnimatePresence, easeInOut, motion } from 'framer-motion';
+import { easeInOut, motion } from 'framer-motion';
 
 const spring = {
     type: "spring",
@@ -145,7 +145,7 @@ function TodoSubItem({
                     />) :
                     (<p className={"label-text text-lg text-green-950 w-full mx-3 " + (subtask.checked ? "line-through" : "")}>{subtask.task}</p>)
                 }
-                <button className="btn flex-1 object-none object-right min-w-12 mx-1 shadow-2xl" onClick={() => toggleSubtaskEdit(subtask.id)}><img src="../../public/pen.png" alt="" /></button>
+                <button className="btn flex-1 object-none object-right min-w-14 mx-2 shadow-2xl" onClick={() => toggleSubtaskEdit(subtask.id)}><img src="../../public/pen.png" alt="" /></button>
                 <button className="btn text-lg bg-gray-300 text-black w-12 min-w-12 shwdow-2xl" onClick={() => deleteSubtask(subtask.id)}><p className='rotate-45'>+</p></button>
             </label>
         </motion.div>
