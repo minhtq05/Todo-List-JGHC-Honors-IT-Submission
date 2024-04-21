@@ -1,5 +1,6 @@
 # Todo List (JGHC Honors IT Submission)
 
+[Here is an early-stage preview of the product.](https://todo-list-jghc-honors-it-submission.vercel.app/)
 
 This is a simple yet powerful Todo List application with a Contact Card feature that fetches random user data from randomuser.me. The project is created as a Web Development Skill Assessment submission for the Honors IT position at USF JGHC by **Quang Minh Tran**.
 
