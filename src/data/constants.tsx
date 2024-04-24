@@ -37,40 +37,28 @@ export const todos: Item[] = [
     },
     {
         id: 1,
-        task: "Do homeworks due on Sunday",
+        task: "Do chemistry lab homeworks",
         checked: false,
         is_editing: false,
         subtasks: [
             {
                 id: 0,
-                task: "Math",
+                task: "Prelab plan",
                 checked: false,
                 is_editing: false,
             },
             {
                 id: 1,
-                task: "English",
+                task: "Prelab quiz",
                 checked: false,
                 is_editing: false,
             },
             {
                 id: 2,
-                task: "Science",
+                task: "Postlab submission",
                 checked: false,
                 is_editing: false,
             },
-            {
-                id: 3,
-                task: "History",
-                checked: false,
-                is_editing: false,
-            },
-            {
-                id: 4,
-                task: "Geography",
-                checked: false,
-                is_editing: false,
-            }
         ],
     }
 ];

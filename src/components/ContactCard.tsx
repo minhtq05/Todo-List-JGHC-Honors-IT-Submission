@@ -77,22 +77,22 @@ function ContactCard({
                             <table className='table'>
                                 <tbody>
                                     <tr>
-                                        <td className="text-black text-lg font-sans font-semibold py-1">Title: {randomPerson.name.title}</td>
+                                        <td className="text-black text-lg font-sans font-semibold py-1"><strong>Title:</strong> {randomPerson.name.title}</td>
                                     </tr>
                                     <tr>
-                                        <td className="text-black text-lg font-sans font-semibold py-1">Phone: {randomPerson.cell}</td>
+                                        <td className="text-black text-lg font-sans font-semibold py-1"><strong>Phone:</strong> {randomPerson.cell}</td>
                                     </tr>
                                     <tr>
-                                        <td className="text-black text-lg font-sans font-semibold py-1">First Name: {randomPerson.name.first}</td>
+                                        <td className="text-black text-lg font-sans font-semibold py-1"><strong>First name:</strong> {randomPerson.name.first}</td>
                                     </tr>
                                     <tr>
-                                        <td className="text-black text-lg font-sans font-semibold py-1">Email: {randomPerson.email}</td>
+                                        <td className="text-black text-lg font-sans font-semibold py-1"><strong>Email:</strong> {randomPerson.email}</td>
                                     </tr>
                                     <tr>
-                                        <td className="text-black text-lg font-sans font-semibold py-1">Last Name: {randomPerson.name.last}</td>
+                                        <td className="text-black text-lg font-sans font-semibold py-1"><strong>Last Name:</strong> {randomPerson.name.last}</td>
                                     </tr>
                                     <tr>
-                                        <td className="text-black text-lg font-sans font-semibold py-1">Age: {randomPerson.dob.age}</td>
+                                        <td className="text-black text-lg font-sans font-semibold py-1"><strong>Age:</strong> {randomPerson.dob.age}</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -101,16 +101,16 @@ function ContactCard({
                             <table className='table'>
                                 <tbody>
                                     <tr>
-                                        <td className="text-black text-2xl font-sans font-semibold py-2">Title: {randomPerson.name.title}</td>
-                                        <td className="text-black text-2xl font-sans font-semibold py-2">Phone: {randomPerson.cell}</td>
+                                        <td className="text-black text-2xl font-sans font-semibold py-2"><strong>Title:</strong> {randomPerson.name.title}</td>
+                                        <td className="text-black text-2xl font-sans font-semibold py-2"><strong>Phone:</strong> {randomPerson.cell}</td>
                                     </tr>
                                     <tr>
-                                        <td className="text-black text-2xl font-sans font-semibold py-2">First Name: {randomPerson.name.first}</td>
-                                        <td className="text-black text-2xl font-sans font-semibold py-2">Email: {randomPerson.email}</td>
+                                        <td className="text-black text-2xl font-sans font-semibold py-2"><strong>First Name:</strong> {randomPerson.name.first}</td>
+                                        <td className="text-black text-2xl font-sans font-semibold py-2"><strong>Email:</strong> {randomPerson.email}</td>
                                     </tr>
                                     <tr>
-                                        <td className="text-black text-2xl font-sans font-semibold py-2">Last Name: {randomPerson.name.last}</td>
-                                        <td className="text-black text-2xl font-sans font-semibold py-2">Age: {randomPerson.dob.age}</td>
+                                        <td className="text-black text-2xl font-sans font-semibold py-2"><strong>Last Name:</strong> {randomPerson.name.last}</td>
+                                        <td className="text-black text-2xl font-sans font-semibold py-2"><strong>Age:</strong> {randomPerson.dob.age}</td>
                                     </tr>
                                 </tbody>
                             </table>
