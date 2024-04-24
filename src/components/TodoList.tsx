@@ -4,7 +4,7 @@ import { todos } from '../data/constants';
 import { Item, SubItem } from '../data/types';
 
 
-export default function TodoList() {
+export default function TodoList({ isMobile }: { isMobile: boolean }) {
     const [tasks, setTasks] = useState([
         ...todos
     ]);
@@ -21,6 +21,7 @@ export default function TodoList() {
     }, [invalidText]);
 
     useEffect(() => {
+        console.log('tasks are updating...');
         const res: Item[] = []
         tasks.forEach(task => {
             if (!task.checked) {
@@ -168,7 +169,7 @@ export default function TodoList() {
                     onChange={e => { setText(e.target.value) }}
                     placeholder='What do you have in mind?'
                     onKeyDown={(e) => {
-                        if (e.key === 'Enter') {
+                        if (e.key === 'Enter' && text.length > 0) {
                             addTask(text);
                         }
                     }}
@@ -200,6 +201,7 @@ export default function TodoList() {
                     editTask={editTask}
                     toggleSubtaskEdit={toggleEditSubtask}
                     editSubtask={editSubtask}
+                    isMobile={isMobile}
                 />
             ))}
         </div>

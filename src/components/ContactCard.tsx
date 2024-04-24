@@ -34,7 +34,11 @@ interface Response {
     }
 }
 
-function ContactCard() {
+function ContactCard({
+    isMobile
+}: {
+    isMobile: boolean
+}) {
     const [randomPerson, setPerson] = useState<Person>();
 
     useEffect(() => {
@@ -68,27 +72,52 @@ function ContactCard() {
                 <div className="card-body p-10">
                     <h1 className="card-title text-4xl font-mono font-bold">Contact Card</h1>
                     <div className="divider text-xl">Info</div>
-                    <div className="overflow-x-auto">
-
-                        <table className='table'>
-                            <tbody>
-                                <tr>
-                                    <td className="text-black text-2xl font-mono font-bold py-2">Title: {randomPerson.name.title}</td>
-                                    <td className="text-black text-2xl font-mono font-bold py-2">Phone: {randomPerson.cell}</td>
-                                </tr>
-                                <tr>
-                                    <td className="text-black text-2xl font-mono font-bold py-2">First Name: {randomPerson.name.first}</td>
-                                    <td className="text-black text-2xl font-mono font-bold py-2">Email: {randomPerson.email}</td>
-                                </tr>
-                                <tr>
-                                    <td className="text-black text-2xl font-mono font-bold py-2">Last Name: {randomPerson.name.last}</td>
-                                    <td className="text-black text-2xl font-mono font-bold py-2">Age: {randomPerson.dob.age}</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    {isMobile ?
+                        (<div className="overflow-x-auto">
+                            <table className='table'>
+                                <tbody>
+                                    <tr>
+                                        <td className="text-black text-lg font-sans font-semibold py-1">Title: {randomPerson.name.title}</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="text-black text-lg font-sans font-semibold py-1">Phone: {randomPerson.cell}</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="text-black text-lg font-sans font-semibold py-1">First Name: {randomPerson.name.first}</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="text-black text-lg font-sans font-semibold py-1">Email: {randomPerson.email}</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="text-black text-lg font-sans font-semibold py-1">Last Name: {randomPerson.name.last}</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="text-black text-lg font-sans font-semibold py-1">Age: {randomPerson.dob.age}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>) :
+                        (<div className="overflow-x-auto">
+                            <table className='table'>
+                                <tbody>
+                                    <tr>
+                                        <td className="text-black text-2xl font-sans font-semibold py-2">Title: {randomPerson.name.title}</td>
+                                        <td className="text-black text-2xl font-sans font-semibold py-2">Phone: {randomPerson.cell}</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="text-black text-2xl font-sans font-semibold py-2">First Name: {randomPerson.name.first}</td>
+                                        <td className="text-black text-2xl font-sans font-semibold py-2">Email: {randomPerson.email}</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="text-black text-2xl font-sans font-semibold py-2">Last Name: {randomPerson.name.last}</td>
+                                        <td className="text-black text-2xl font-sans font-semibold py-2">Age: {randomPerson.dob.age}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>)
+                    }
                 </div>
-            </div>
+            </div >
             {/* <div className="card lg:card-side bg-base-100 shadow-xl border-2 rounded-lg border-indigo-500 my-2 w-full block">
                 <figure><img className="p-10 w-1/3 inline-flex" src={randomPerson.picture.large} alt="Picture of a random person" /></figure>
                 <div className="card-body">
