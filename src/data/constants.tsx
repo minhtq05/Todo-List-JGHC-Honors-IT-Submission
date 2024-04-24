@@ -10,26 +10,26 @@ export const todos: Item[] = [
         subtasks: [
             {
                 id: 0,
-                task: "Buy fruits",
+                task: "Fruits: apples, oranges, pears",
                 checked: false,
                 is_editing: false,
 
             },
             {
                 id: 1,
-                task: "Get vegetables",
+                task: "Vegetables: carrots, broccoli, spinach",
                 checked: false,
                 is_editing: false,
             },
             {
                 id: 2,
-                task: "Pick up bread",
+                task: "Bread",
                 checked: false,
                 is_editing: false,
             },
             {
                 id: 3,
-                task: "Grab milk",
+                task: "Milk",
                 checked: false,
                 is_editing: false,
             }
