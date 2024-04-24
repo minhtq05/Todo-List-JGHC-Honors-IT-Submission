@@ -51,7 +51,7 @@ export default function TodoList({ isMobile }: { isMobile: boolean }) {
             subtasks: [],
             is_editing: false,
         }
-        setTasks([...tasks, newTask]);
+        setTasks([newTask, ...tasks]);
         setText('');
     }
 
