@@ -1,4 +1,4 @@
-import { Item, SubItem } from "./types";
+import { Item } from "./types";
 import { easeInOut } from "framer-motion";
 
 export const todos: Item[] = [
